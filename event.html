@@ -1,188 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Photos</title>
+    <title>Les Family</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-
-    <style>
-    body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #5c159e;
-            color: white;
-            position: relative;
-            bottom: 0;
-            font-weight: bold;
-            width: -webkit-fill-available;
-        }
-
-        .head {
-            background-color: #5c159e;
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-            width: -webkit-fill-available;
-        }
-
-        .picIntroduce {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        h1.family-title {
-            margin: 0 20px; 
-        }
-
-        .event-container {
-            display: flex;
-            align-items: center; 
-            width: 100%;
-            max-width: 800px; 
-            flex-wrap: nowrap; 
-            justify-content: flex-start; 
-        }
-
-        h1.event-title {
-            white-space: nowrap; 
-        }
-
-        .slider {
-            max-width: 600px;
-            padding: 10px; 
-            flex: 1; 
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            width: 100%;
-            padding: 10px;
-        }
-        .slick-slide{
-            width: 100%;
-        }
-
-        .img-container {
-            border-radius: 10px;
-            overflow: hidden;
-            height: auto;
-            margin: 0 auto;
-            max-width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-        }
-
-        .img-container img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            height: auto;
-        }
-
-        input[type="checkbox"] {
-            display: none;
-        }
-
-        label {
-            margin-left: 15px; 
-            width: 5rem;
-            height: 5rem;
-            background: #83cfe6;
-            border-radius: 50%; /* 圓形 */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 0.25em;
-            cursor: pointer;
-        }
-
-        label div {
-            width: 1.5rem;
-            height: 0.25rem;
-            background: #fff;
-            border-radius: 0.25rem;
-            transition: all 0.3s;
-        }
-
-        .cover {
-            position: absolute;
-            top: 30%;
-             right: 0; /* 靠右 */
-            transform: translate(0, -50%);
-             height: auto;
-             background: rgba(248, 188, 235, 0.5); /* 調整透明度 */
-            z-index: 1;
-             transition: all 0.3s;
-            overflow: hidden;
-            width: 250px; /* 調整寬度 */
-        }
-
-        input:checked ~ label > .cover {
-            width: 400vmax;
-            height: 400vmax;
-        }
-
-        ul {
-            position: absolute;
-             top: 50%;
-             right: 10px; /* 靠右 */
-             transform: translate(0, -50%); /* 垂直居中 */
-             width: auto;
-             color: #fff;
-             font-size: 1em; /* 調整字體大小 */
-            list-style: none;
-            font-weight: 700;
-            text-align: right; /* 文字靠右 */
-        }
-
-        ul li {
-             font-size: 0.9em; /* 進一步調整每個列表項的字體大小 */
-             margin: 5px 0; /* 調整每個列表項的間距 */
-        }
-
-        span {
-            color: #a3c5ec;
-            font-size: 2.5em;
-        }
-
-        .slick-dots {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .event-container {
-                flex-direction: column; 
-                align-items: center; 
-            }
-
-            h1.family-title, h1.event-title {
-                text-align: center;
-                width: inherit;
-            }
-
-            .picIntroduce {
-                justify-content: center; 
-            }
-        }
-    </style>
 </head>
+
 <body>
     <div class="picIntroduce">
         <img src="./Les/les family.png" alt="Cinque Terre" width="75" height="75">
@@ -197,7 +23,7 @@
                     <li><a href="index.html">Les family</a></li>
                     <li><a href="rule.html">Rules</a></li>
                     <li><a href="phot.html">Member</a></li>
-                    <li><a href="Event photos.html">Photos</a></li>
+                    <li><a href="event.html">Photos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="tutorial.html">Tutorial</a></li>
                 </ul>
@@ -205,8 +31,11 @@
         </label>
     </div>
 
+    <div class="head">
+        <h1>活動花絮</h1>
+    </div>
+
     <div class="event-container">
-        <h1 class="event-title head">活動花絮</h1>
         <div class="slider">
             <div class="img-container">
                 <img src="./202411/20241.jpg" alt="Photo 1">
@@ -344,33 +173,230 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.slider').slick({
-                autoplay: true,
-                autoplaySpeed: 1500,
-                dots: false, // 確保小點點不顯示
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode:true,
-                centerPadding:'0',
-            });
-        });
-    </script>
- <footer style="text-align: center; padding: 10px; font-size: xx-small;">
-    <p>
-        <span style="color: #FF5733;">&copy;成立</span>
-        <span style="color: #33FF57;">2023</span>
-        <span style="color: #3357FF;">/11/22</span>
-        <span style="color: #FF33A6;"> Les</span>
-        <span style="color: #FFA533;"> Family</span>
-    </p>
-</footer>
-
+    
+    <footer style="text-align: center; padding: 10px; font-size: xx-small;">
+        <p>
+            <span style="color: #FF5733;">&copy;成立</span>
+            <span style="color: #33FF57;">2023</span>
+            <span style="color: #3357FF;">/11/22</span>
+            <span style="color: #FF33A6;"> Les</span>
+            <span style="color: #FFA533;"> Family</span>
+        </p>
+    </footer>
+    
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.slider').slick({
+            autoplay: true,
+            autoplaySpeed: 1500,
+            dots: false, // 確保小點點不顯示
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode:true,
+            centerPadding:'0',
+        });
+    });
+</script>
+
+<style>
+    body {
+        overflow-x: hidden;
+        margin: 0;
+        /* background-image: url('./Les/photo_2024-10-16_15-56-30.jpg'); */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #5c159e;
+        color: white;
+        position: relative;
+        bottom: 0;
+        font-weight: bold;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    h2, h3 {
+        color: #eb0606;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .picIntroduce {
+        position: relative;
+        justify-content: center;
+        background-color: rgb(252, 253, 253);
+        width: 100%;
+        display: flex;
+        /* padding-right: 20%; */
+    }
+
+    .event-container {
+        display: flex;
+        align-items: center; 
+        width: 100%;
+        flex-wrap: nowrap; 
+        justify-content: center; 
+    }
+
+    .slider {
+        max-width: 600px;
+        padding: 10px; 
+        flex: 1; 
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        padding: 10px;
+    }
+    .slick-slide{
+        width: 100%;
+    }
+
+    .img-container {
+        border-radius: 10px;
+        overflow: hidden;
+        height: auto;
+        margin: 0 auto;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .img-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        height: auto;
+    }
+
+    .moderator-container, .admin-container {
+        text-align: center;
+    }
+
+    .member {
+        align-items: center;
+        justify-content: left;
+        margin: 10px;
+    }
+
+    .member img:first-child {
+        margin-right: 10px; /* 圖片間距 */
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    label {
+        position: absolute;
+        right: -40%;
+        width: 5rem;
+        height: 5rem;
+        background: #83cfe6;
+        display: block;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.25em;
+        position: relative;
+        cursor: pointer;
+    }
+
+    label div {
+        width: 1.5rem;
+        height: 0.25rem;
+        background: #fff;
+        border-radius: 0.25rem;
+        transition: all 0.3s;
+    }
+
+    .cover {
+        position: absolute;
+        top: 30%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        height: 200px;
+        background: rgba(248, 188, 235, 0.8);
+        z-index: 1;
+        transition: all 0.3s;
+        overflow: hidden;
+    }
+
+    input:checked ~ label > .cover {
+        width: 400vmax;
+        height: 400vmax;
+    }
+
+    ul {
+        position: absolute;
+        top: 51%;
+        right: 50%;
+        width: auto;
+        color: #fff;
+        font-size: 1.2em;
+        list-style: none;
+        font-weight: 700;
+    }
+
+    span {
+        color: #a3c5ec;
+        font-size: 2.5em;
+    }
+
+    .head {
+        background-color: #5c159e;
+        color: white;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .slick-dots {
+            display: none;
+        }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2em; /* 在手機上調整標題字體大小 */
+        }
+        li {
+            font-size: 1em; /* 在手機上調整列表字體大小 */
+        }
+        label {
+            right: 0px; /* 在手機上調整漢堡菜單位置 */
+        }
+        input:checked ~ label > .cover {
+            /* width: 75vmax; */
+            width: 100vw;
+            height: 400vmax;
+            left: -85%;
+        }
+        ul {
+            right: 26%;
+        }
+        .event-container {
+                flex-direction: column; 
+                align-items: center; 
+            }
+    }
+</style>
+
 </html>

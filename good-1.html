@@ -43,7 +43,7 @@
             position: relative;
             justify-content: center;
             background-color: rgb(252, 253, 253);
-            width: 100%;
+            /* width: 100%; */
             display: flex;
             padding-right: 20%;
             padding-bottom: 10px; /* 調整下方空白 */
@@ -83,7 +83,7 @@
             color: white;
             position: relative;
             bottom: 0;
-            width: 100%;
+            /* width: 100%; */
         }
 
         input[type="checkbox"] {
@@ -147,26 +147,26 @@
         }
 
         @media (max-width: 768px) {
-            .picIntroduce {
-                padding-right: 10%; 
-            }
-
             .gallery {
                 flex-direction: column; 
                 align-items: center;
             }
 
             label {
-                right: 5%; 
+                right: 0%; 
             }
 
-            .cover {
-                left: 50%; 
-                transform: translate(-50%, -50%);
+            input:checked ~ label > .cover {
+                /* width: 75vmax; */
+                width: 100vw;
+                height: 400vmax;
+                left: -95%;
             }
 
             ul {
                 right: 0; 
+                top: 54%;
+                left: 40%;
             }
         }
     </style>

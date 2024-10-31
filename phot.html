@@ -4,16 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>社群成員介紹</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            /* font-family: Arial, sans-serif; */
             background-color: #f4f4f4;
             margin: 0;
-            padding: 20px;
+            /* padding: 20px; */
             background-image: url('./Member\ introduction/les.jpg.png');
             background-size: cover;
             background-position: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1763c5;
+            color: white;
+            position: relative;
+            bottom: 0;
+            font-weight: bold;
+        }
+
+        .picIntroduce {
+            position: relative;
+            justify-content: center;
+            background-color: rgb(252, 253, 253);
+            width: 100%;
+            display: flex;
+            /* padding-right: 20%; */
         }
 
         .container {
@@ -23,7 +41,7 @@
         }
 
         h1 {
-            margin-bottom: 20px;
+            text-align: center;
         }
 
         .profiles {
@@ -54,8 +72,7 @@
 
         label {
             position: absolute;
-            top: 20px; /* 調整到頂部 */
-            right: 20px; /* 調整到右側 */
+            right: -40%;
             width: 5rem;
             height: 5rem;
             background: #83cfe6;
@@ -66,8 +83,8 @@
             align-items: center;
             justify-content: center;
             gap: 0.25em;
+            position: relative;
             cursor: pointer;
-            z-index: 2; /* 確保在最上層 */
         }
 
         label div {
@@ -79,61 +96,95 @@
         }
 
         .cover {
-        position: absolute;
-        top: 30%;
-        left: 60%;
-        transform: translate(-50%, -50%);
-        height: 200px;
-        background: rgba(248, 188, 235, 0.8);
-        z-index: 1;
-        transition: all 0.3s;
-        overflow: hidden;
-    }
+            position: absolute;
+            top: 30%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            height: 200px;
+            background: rgba(248, 188, 235, 0.8);
+            z-index: 1;
+            transition: all 0.3s;
+            overflow: hidden;
+        }
 
-    input:checked ~ label > .cover {
-        width: 400vmax;
-        height: 400vmax;
-    }
+        .head {
+            background-color: #1763c5;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+        }
 
-    ul {
-        position: absolute;
-        top: 51%;
-        right: 50%;
-        width: auto;
-        color: #fff;
-        font-size: 0.8em;
-        list-style: none;
-        font-weight: 700;
-        text-align: center;
-    }
+        input:checked ~ label > .cover {
+            width: 400vmax;
+            height: 400vmax;
+        }
+
+        ul {
+            position: absolute;
+            top: 51%;
+            right: 50%;
+            width: auto;
+            color: #fff;
+            font-size: 0.8em;
+            list-style: none;
+            font-weight: 700;
+            text-align: center;
+        }
 
         span {
             color: #a3c5ec;
             font-size: 2.5em;
         }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em; /* 在手機上調整標題字體大小 */
+            }
+            li {
+                font-size: 1em; /* 在手機上調整列表字體大小 */
+            }
+            label {
+                right: 0px; /* 在手機上調整漢堡菜單位置 */
+            }
+            input:checked ~ label > .cover {
+                /* width: 75vmax; */
+                width: 100vw;
+                height: 400vmax;
+                left: -85%;
+            }
+            ul {
+                right: 26%;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="picIntroduce">
+        <img src="./Les/les family.png" alt="Cinque Terre" width="75" height="75">
+        <h1>Les family</h1>
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span class="cover">
+                <ul>
+                    <li><a href="index.html">Les family</a></li>
+                    <li><a href="rule.html">Rules</a></li>
+                    <li><a href="phot.html">Member</a></li>
+                    <li><a href="event.html">Photos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="tutorial.html">Tutorial</a></li>
+                </ul>
+            </span>
+        </label>
+    </div>
 
-    <input type="checkbox" id="menu">
-    <label for="menu">
-        <div></div>
-        <div></div>
-        <div></div>
-        <span class="cover">
-            <ul>
-                <li><a href="index.html">Les family</a></li>
-                <li><a href="Untitled-1.html">Rules</a></li>
-                <li><a href="phot.html">Member</a></li>
-                <li><a href="Event photos.html">photos</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="good-1.html">Tutorial</a></li>
-            </ul>
-        </span>
-    </label>
-
-    <div class="container">
+    <div class="head">
         <h1>社群成員介紹</h1>
+    </div>
+
+    <div class="container" style="margin-top: 5%;">
         <div class="profiles">
             <div class="profile">
                 <img src="./Member introduction/girl (1).jpg">
@@ -205,7 +256,7 @@
             </div>
             
     </div>
-    <footer style="text-align: center; padding: 10px;">
+    <footer style="text-align: center; padding: 10px; font-size: xx-small; margin-top: 5%;">
         <p>
             <span style="color: #FF5733;">&copy;成立</span>
             <span style="color: #66c277;">2023</span>
