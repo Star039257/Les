@@ -31,34 +31,34 @@
     <h2>Moderator</h2>
     <div class="moderator-container">
         <div class="member">
-            <img src="./Les/R.png" alt="Cinque Terre" width="55" height="55">
             <img src="./Les/photo_2024-10-15_17-40-47.jpg" alt="blue highway" height="280" width="200">
-            <span>Ray</span>
         </div>
+        <img src="./Les/R.png" alt="Cinque Terre" width="55" height="55">
+        <span>Ray</span>
     </div>
 
     <h3>Administrator</h3>
     <div class="admin-container">
         <div class="member">
-            <img src="./Les/star.png" alt="Cinque Terre" width="55" height="55">
-            <img src="./Les/photo_2024-10-15_17-40-43.jpg" alt="blue highway" height="280" width="200">
-            <span>星空</span>
+            <img src="./Les/photo_2024-10-15_17-40-43.jpg" alt="blue highway" height="280" width="200">     
         </div>
+        <img src="./Les/star.png" alt="Cinque Terre" width="55" height="55">
+        <span>星空</span>
         <div class="member">
-            <img src="./Les/zeus.png" alt="Cinque Terre" width="55" height="55">
             <img src="./Les/photo_2024-10-15_14-02-16.jpg" alt="blue highway" height="280" width="200">
-            <span>宙斯</span>
         </div>
+        <img src="./Les/zeus.png" alt="Cinque Terre" width="55" height="55">
+        <span>宙斯</span>
         <div class="member">
-            <img src="./Les/Ryne.png" alt="Cinque Terre" width="55" height="55">
             <img src="./Les/photo_2024-10-15_17-27-15.jpg" alt="blue highway" height="250" width="200">
-            <span>大瑞</span>
         </div>
+        <img src="./Les/Ryne.png" alt="Cinque Terre" width="55" height="55">
+        <span>大瑞</span>
         <div class="member">
-            <img src="./Les/sauna.png" alt="Cinque Terre" width="55" height="55">
             <img src="./Les/photo_2024-10-15_17-27-18.jpg" alt="blue highway" height="280" width="200">
-            <span>真頁</span>
         </div>
+        <img src="./Les/sauna.png" alt="Cinque Terre" width="55" height="55">
+        <span>真頁</span>
     </div>
     <footer style="text-align: center; padding: 10px;">
         <p>
@@ -101,7 +101,7 @@
         background-color: rgb(252, 253, 253);
         width: 100%;
         display: flex;
-        padding-right: 20%;
+        /* padding-right: 20%; */
     }
 
     .moderator-container, .admin-container {
@@ -135,7 +135,7 @@
         align-items: center;
         justify-content: center;
         gap: 0.25em;
-        /*position: relative;*/
+        position: relative;
         cursor: pointer;
     }
 
@@ -181,18 +181,27 @@
     }
 
     @media (max-width: 768px) {
-            body {
-                padding: 10px; /* 在手機上減小內邊距 */
-            }
-            h1 {
-                font-size: 2em; /* 在手機上調整標題字體大小 */
-            }
-            li {
-                font-size: 1em; /* 在手機上調整列表字體大小 */
-            }
-            label {
-                right: 10px; /* 在手機上調整漢堡菜單位置 */
-            }
+        body {
+            padding: 10px; /* 在手機上減小內邊距 */
+        }
+        h1 {
+            font-size: 2em; /* 在手機上調整標題字體大小 */
+        }
+        li {
+            font-size: 1em; /* 在手機上調整列表字體大小 */
+        }
+        label {
+            right: 0px; /* 在手機上調整漢堡菜單位置 */
+        }
+        input:checked ~ label > .cover {
+            /* width: 75vmax; */
+            width: 100vw;
+            height: 400vmax;
+            left: -85%;
+        }
+        ul {
+            right: 26%;
+        }
     }
 </style>
 
