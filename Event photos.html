@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Photos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .picIntroduce {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            padding: 10px; 
+            box-sizing: border-box;
+        }
+
+        h1.family-title {
+            margin: 0 20px; 
+        }
+
+        .event-container {
+            display: flex;
+            align-items: center; 
+            width: 100%;
+            max-width: 800px; 
+            padding: 10px; 
+            flex-wrap: nowrap; 
+            justify-content: flex-start; 
+        }
+
+        h1.event-title {
+            text-align: left; 
+            margin: 0 20px;
+            white-space: nowrap; 
+        }
+
+        .slider {
+            max-width: 600px;
+            padding: 10px; 
+            flex: 1; 
+        }
+
+        .img-container {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label {
+            margin-left: 15px; 
+            width: 5rem;
+            height: 5rem;
+            background: #83cfe6;
+            border-radius: 50%; /* 圓形 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25em;
+            cursor: pointer;
+        }
+
+        label div {
+            width: 1.5rem;
+            height: 0.25rem;
+            background: #fff;
+            border-radius: 0.25rem;
+            transition: all 0.3s;
+        }
+
+        .cover {
+            position: absolute;
+            top: 30%;
+            right: 0; /* 靠右 */
+            transform: translate(0, -50%);
+            height: auto;
+            background: rgba(248, 188, 235, 0.8);
+            z-index: 1;
+            transition: all 0.3s;
+            overflow: hidden;
+            width: 300px; /* 調整寬度 */
+        }
+
+        input:checked ~ label > .cover {
+            width: 400vmax;
+            height: 400vmax;
+        }
+
+        ul {
+            position: absolute;
+            top: 50%;
+            right: 10px; /* 靠右 */
+            transform: translate(0, -50%); /* 垂直居中 */
+            width: auto;
+            color: #fff;
+            font-size: 1.2em;
+            list-style: none;
+            font-weight: 700;
+            text-align: right; /* 文字靠右 */
+        }
+
+        span {
+            color: #a3c5ec;
+            font-size: 2.5em;
+        }
+
+        .slick-dots {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .event-container {
+                flex-direction: column; 
+                align-items: center; 
+            }
+
+            h1.family-title, h1.event-title {
+                text-align: center;
+                margin: 10px 0; 
+            }
+
+            .picIntroduce {
+                justify-content: center; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="picIntroduce">
+        <img src="./202411/les family.png" alt="Cinque Terre" width="75" height="75">
+        <h1 class="family-title">Les family</h1>
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span class="cover">
+                <ul>
+                    <li><a href="les-1.html">Les family</a></li>
+                    <li><a href="Untitled-1.html">Rules</a></li>
+                    <li><a href="phot.html">Member introduction</a></li>
+                    <li><a href="Event photos.html">photos</a></li>
+                </ul>
+            </span>
+        </label>
+    </div>
+
+    <div class="event-container">
+        <h1 class="event-title">Event Photos</h1>
+        <div class="slider">
+            <div class="img-container">
+                <img src="./202411/20241.jpg" alt="Photo 1">
+            </div>
+            <div class="img-container">
+                <img src="./202411/20242.jpg" alt="Photo 2">
+            </div>
+            <div class="img-container">
+                <img src="./202411/20243.jpg" alt="Photo 3">
+            </div>
+            <div class="img-container">
+                <img src="./202411/20245.jpg" alt="Photo 4">
+            </div>
+            <div class="img-container">
+                <img src="./202411/20246.jpg" alt="Photo 5">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: false, // 確保小點點不顯示
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            });
+        });
+    </script>
+ <footer style="text-align: center; padding: 10px;">
+    <p>
+        <span style="color: #FF5733;">&copy;</span>
+        <span style="color: #33FF57;">2023</span>
+        <span style="color: #3357FF;">/11/22</span>
+        <span style="color: #FF33A6;"> Les</span>
+        <span style="color: #FFA533;"> Family</span>
+    </p>
+</footer>
+
+
+</body>
+</html>

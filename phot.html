@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社群成員介紹</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            background-image: url('./Member\ introduction/les.jpg.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .profiles {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .profile {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile img {
+            width: 100%;           
+            height: 150px;         
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label {
+            position: absolute;
+            top: 20px; /* 調整到頂部 */
+            right: 20px; /* 調整到右側 */
+            width: 5rem;
+            height: 5rem;
+            background: #83cfe6;
+            display: block;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25em;
+            cursor: pointer;
+            z-index: 2; /* 確保在最上層 */
+        }
+
+        label div {
+            width: 1.5rem;
+            height: 0.25rem;
+            background: #fff;
+            border-radius: 0.25rem;
+            transition: all 0.3s;
+        }
+
+        .cover {
+            position: absolute;
+            top: 30%;
+            left: 50%; /* 改為 50% */
+            transform: translate(-50%, -50%);
+            height: 200px;
+            background: rgba(248, 188, 235, 0.8);
+            z-index: 1;
+            transition: all 0.3s;
+            overflow: hidden;
+        }
+
+        input:checked ~ label > .cover {
+            width: 400vmax;
+            height: 400vmax;
+        }
+
+        ul {
+            position: absolute;
+            top: 51%;
+            left: 45%; /* 調整到更靠左 */
+            transform: translate(-50%, -50%);
+            width: auto;
+            color: #fff;
+            font-size: 1.2em;
+            list-style: none;
+            font-weight: 700;
+        }
+
+        span {
+            color: #a3c5ec;
+            font-size: 2.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" id="menu">
+    <label for="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+        <span class="cover">
+            <ul>
+                <li><a href="les-1.html">Les family</a></li>
+                <li><a href="Untitled-1.html">Rules</a></li>
+                <li><a href="phot.html">Member introduction</a></li>
+                <li><a href="Event photos.html">photos</a></li>
+            </ul>
+        </span>
+    </label>
+
+    <div class="container">
+        <h1>社群成員介紹</h1>
+        <div class="profiles">
+            <div class="profile">
+                <img src="./Member introduction/girl (1).jpg">
+                <h2>鄰家女孩</h2>
+            </div>
+            <div class="profile">
+                <img src="./Member introduction/Bonnie.jpg">
+                <h2>邦尼</h2>
+            </div>
+            <div class="profile">
+                <img src="./Member introduction/kerry.jpg">
+                <h2>Kerry</h2>
+            </div>
+            <div class="profile">
+                <img src="./Member introduction/Linnnn.jpg">
+                <h2>Linnnn</h2>
+            </div>
+            <div class="profile">
+                <img src="./Member introduction/Tiger.jpg">
+                <h2>陳虎兒</h2>
+            </div>
+            <div class="profile">
+                <img src="./Member introduction/Tan.jpg">
+                <h2>Tna</h2>
+            </div>
+            <div class="profile">
+                <img src="./Member introduction/Simba.jpg">
+                <h2>辛巴</h2>
+            </div>
+            <div class="profile">
+                <img src="./Member introduction/green.jpg">
+                <h2>小青</h2>
+            </div>
+            <div class="profile">
+                <img src="./Member introduction/Nicky.jpg">
+                <h2>Nicky</h2>
+            </div>
+            <div class="profile">
+                <img src="./Member introduction/Lu.jpg">
+                <h2>嚕米</h2>
+            </div>
+            <div class="profile">
+                <img src="./Member introduction/pink.jpg">
+                <h2>阿粉</h2>
+            </div>
+            <div class="profile">
+                <img src="./Member introduction/mike.jpg">
+                <h2>奶踢</h2>
+            </div>
+            
+    </div>
+    <footer style="text-align: center; padding: 10px;">
+        <p>
+            <span style="color: #FF5733;">&copy;</span>
+            <span style="color: #66c277;">2023</span>
+            <span style="color: #3357FF;">/11/22</span>
+            <span style="color: #FF33A6;"> Les</span>
+            <span style="color: #FFA533;"> Family</span>
+        </p>
+    </footer>
+    
+
+</body>
+</html>

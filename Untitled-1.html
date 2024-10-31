@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e06c6c;
+            margin: 0;
+            padding: 20px; /* 調整內邊距以避免手機上過大 */
+            color: rgb(8, 8, 82);
+            overflow-x: hidden; /* 隱藏橫向滾動條 */
+        }
+        h1 {
+            color: #f30b0b;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #333;
+            font-size: 0.9em;
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+        label {
+            position: absolute;
+            top: 20px; 
+            right: 20px; 
+            width: 60px; /* 調整為圓形的直徑 */
+            height: 60px; /* 調整為圓形的直徑 */
+            background: #83cfe6;
+            border-radius: 50%; /* 確保圓形 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25em;
+            cursor: pointer;
+            z-index: 2; 
+        }
+        label div {
+            width: 1.5rem;
+            height: 0.25rem;
+            background: #fff;
+            border-radius: 0.25rem;
+            transition: all 0.3s;
+        }
+        .cover {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 200px;
+            background: rgba(248, 188, 235, 0.8);
+            z-index: 1;
+            transition: all 0.3s;
+            overflow: hidden;
+        }
+        input:checked ~ label > .cover {
+            width: 400vmax;
+            height: 400vmax;
+        }
+        ul {
+            position: absolute;
+            top: 52%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            width: auto;
+            color: #fff;
+            font-size: 1.0em;
+            list-style: none;
+            font-weight: 700;
+        }
+        span {
+            color: #a3c5ec;
+            font-size: 2.5em;
+        }
+
+        /* 媒體查詢 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px; /* 在手機上減小內邊距 */
+            }
+            h1 {
+                font-size: 2em; /* 在手機上調整標題字體大小 */
+            }
+            li {
+                font-size: 1em; /* 在手機上調整列表字體大小 */
+            }
+            label {
+                right: 10px; /* 在手機上調整漢堡菜單位置 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" id="menu">
+    <label for="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+        <span class="cover">
+            <ul>
+                <li><a href="les-1.html">Les family</a></li>
+                <li><a href="Untitled-1.html">Rules</a></li>
+                <li><a href="phot.html">Member introduction</a></li>
+                <li><a href="Event photos.html">photos</a></li>
+            </ul>
+        </span>
+    </label>
+
+    <h1>Rules</h1>
+    <p>歡迎進入 LES 大家族</p>
+    <ol>
+        <li>須完成記事本簽到</li>
+        <li>須完成語音9秒</li>
+        <li>需要更換本人大頭貼</li>
+        <li>尊重所有成員，無論意見如何不同。</li>
+        <li>禁止任何形式的騷擾或歧視。</li>
+        <li>想加好友需經過對方同意</li>
+        <li>禁止 吵架、借貸、貼圖洗版、張貼其他群組連結、傳遞不實報導</li>
+    </ol>
+    
+    <footer style="text-align: center; padding: 10px;">
+        <p>
+            <span style="color: #FF5733;">&copy;</span>
+            <span style="color: #369447;">2023</span>
+            <span style="color: #3357FF;">/11/22</span>
+            <span style="color: #FF33A6;"> Les</span>
+            <span style="color: #FFA533;"> Family</span>
+        </p>
+    </footer>
+    
+
+</body>
+</html>
