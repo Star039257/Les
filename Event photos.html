@@ -109,14 +109,14 @@
         .cover {
             position: absolute;
             top: 30%;
-            right: 0; /* 靠右 */
+             right: 0; /* 靠右 */
             transform: translate(0, -50%);
-            height: auto;
-            background: rgba(248, 188, 235, 0.8);
+             height: auto;
+             background: rgba(248, 188, 235, 0.5); /* 調整透明度 */
             z-index: 1;
-            transition: all 0.3s;
+             transition: all 0.3s;
             overflow: hidden;
-            width: 300px; /* 調整寬度 */
+            width: 250px; /* 調整寬度 */
         }
 
         input:checked ~ label > .cover {
@@ -126,15 +126,20 @@
 
         ul {
             position: absolute;
-            top: 50%;
-            right: 10px; /* 靠右 */
-            transform: translate(0, -50%); /* 垂直居中 */
-            width: auto;
-            color: #fff;
-            font-size: 1.2em;
+             top: 50%;
+             right: 10px; /* 靠右 */
+             transform: translate(0, -50%); /* 垂直居中 */
+             width: auto;
+             color: #fff;
+             font-size: 1em; /* 調整字體大小 */
             list-style: none;
             font-weight: 700;
             text-align: right; /* 文字靠右 */
+        }
+
+        ul li {
+             font-size: 0.9em; /* 進一步調整每個列表項的字體大小 */
+             margin: 5px 0; /* 調整每個列表項的間距 */
         }
 
         span {

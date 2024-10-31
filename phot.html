@@ -77,33 +77,33 @@
         }
 
         .cover {
-            position: absolute;
-            top: 30%;
-            left: 50%; /* 改為 50% */
-            transform: translate(-50%, -50%);
-            height: 200px;
-            background: rgba(248, 188, 235, 0.8);
-            z-index: 1;
-            transition: all 0.3s;
-            overflow: hidden;
-        }
+        position: absolute;
+        top: 30%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        height: 200px;
+        background: rgba(248, 188, 235, 0.8);
+        z-index: 1;
+        transition: all 0.3s;
+        overflow: hidden;
+    }
 
-        input:checked ~ label > .cover {
-            width: 400vmax;
-            height: 400vmax;
-        }
+    input:checked ~ label > .cover {
+        width: 400vmax;
+        height: 400vmax;
+    }
 
-        ul {
-            position: absolute;
-            top: 51%;
-            left: 45%; /* 調整到更靠左 */
-            transform: translate(-50%, -50%);
-            width: auto;
-            color: #fff;
-            font-size: 1.2em;
-            list-style: none;
-            font-weight: 700;
-        }
+    ul {
+        position: absolute;
+        top: 51%;
+        right: 50%;
+        width: auto;
+        color: #fff;
+        font-size: 0.8em;
+        list-style: none;
+        font-weight: 700;
+        text-align: center;
+    }
 
         span {
             color: #a3c5ec;
