@@ -28,15 +28,17 @@
 
         .profiles {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr); /* 改为 2 列 */
             gap: 20px;
         }
 
         .profile {
-            background: white;
-            padding: 15px;
+             background: white;
+            padding: 10px; /* 增加内边距 */
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            min-width: 100px; /* 设置最小宽度 */
+            min-height: 150px; /* 设置最小高度 */
         }
 
         .profile img {
@@ -155,6 +157,14 @@
             <div class="profile">
                 <img src="./Member introduction/Tan.jpg">
                 <h2>Tna</h2>
+            </div>
+            <div class="profile">
+                <img src="./Member introduction/ray.jpg">
+                <h2>Rya</h2>
+            </div>
+            <div class="profile">
+                <img src="./Member introduction/star (2).jpg">
+                <h2>star</h2>
             </div>
             <div class="profile">
                 <img src="./Member introduction/Simba.jpg">
